@@ -1,0 +1,5 @@
+<section id='records'>
+ <%= render 'records' %>
+</section>
+<%= render "refinery/race_registrations/admin/submenu" %>
+<%= render '/refinery/admin/make_sortable', :tree => false if !searching? and ::Refinery::RaceRegistrations::Admin::RegistrationsController.sortable? and ::Refinery::RaceRegistrations::Registration.count > 1 %>

@@ -1,0 +1,139 @@
+fr:
+  refinery:
+    plugins:
+      groups:
+        title: Groups
+      categories:
+        title: Categories
+      people:
+        title: People
+      registrations:
+        title: Registrations
+    race_registrations:
+      admin:
+        submenu:
+          manage: Manage
+        groups:
+          form:
+            choose_categories: Choose categories
+            choose_groups:      Choose group of categories
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Group
+            reorder: Réordonner les Groups
+            reorder_done: Fin de réordonnancement des Groups
+          records:
+            title: Groups
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Group. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Group" pour créer votre premi(er/ère) group.
+          group:
+            view_live_html: Voir ce(t/tte) group <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) group
+            delete: Supprimer définitivement ce(t/tte) group
+        categories:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Category
+            reorder: Réordonner les Categories
+            reorder_done: Fin de réordonnancement des Categories
+          records:
+            title: Categories
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Category. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Category" pour créer votre premi(er/ère) category.
+          category:
+            view_live_html: Voir ce(t/tte) category <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) category
+            delete: Supprimer définitivement ce(t/tte) category
+        people:
+          index:
+            choose_registrations: Choose registrations
+            filter: Filter
+            search: Search
+          form:
+            choose_category: Choose category
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Person
+            reorder: Réordonner les People
+            reorder_done: Fin de réordonnancement des People
+          records:
+            title: People
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Person. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Person" pour créer votre premi(er/ère) person.
+          person:
+            view_live_html: Voir ce(t/tte) person <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) person
+            delete: Supprimer définitivement ce(t/tte) person
+        registrations:
+          form:
+            choose_groups: Choose group of categories
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Registration
+            reorder: Réordonner les Registrations
+            reorder_done: Fin de réordonnancement des Registrations
+          records:
+            title: Registrations
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Registration. Cliquer sur
+              "Créer un(e) nouve(au/l/lle) Registration" pour créer votre premi(er/ère)
+              registration.
+          registration:
+            view_live_html: Voir ce(t/tte) registration <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) registration
+            delete: Supprimer définitivement ce(t/tte) registration
+      groups:
+        show:
+          other: Autres Groups
+      categories:
+        show:
+          other: Autres Categories
+      people:
+        form_header:
+          end_of_registration: 'Registration %{title} ends up at '
+          please_use_diacritics: 'Please, use diacritics. Thanks'
+        form:
+          club_if_you_have: Club (if none leave blank)
+          save_registration: Save registration
+          country:
+            different: different
+        new:
+          no_registration: No active registration.
+        show:
+          other: Autres People
+      registrations:
+        registration:
+          number_of_registered_people: "Number of registered people:"
+          sorry_no_registrations: 'Sorry, no registration found.'
+        registration_chooser:
+          show: Zobraziť
+        show:
+          other: Autres Registrations
+  activerecord:
+    attributes:
+      refinery/race_registrations/group:
+        title: Title
+        category_ids: Categories
+      refinery/race_registrations/category:
+        title: Title
+      refinery/race_registrations/person:
+        id: ID
+        name: Name
+        surname: Surname
+        country: Country
+        birth_date: Birth Date
+        email: Email
+        club: Club
+        city: City
+        notice: Notice
+        created_at: Date of registration
+        registration_id: Registration ID
+        category_id: Category ID
+        humanizer_answer: Antispam
+      refinery/race_registrations/registration:
+        title: Title
+        locality: Locality
+        race_date: Race Date
+        is_active: Is Active
+        start_date: Start Date
+        end_date: End Date

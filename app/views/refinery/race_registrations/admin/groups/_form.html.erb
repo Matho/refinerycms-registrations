@@ -1,0 +1,23 @@
+<%= form_for [refinery, :race_registrations_admin, @group] do |f| -%>
+    <%= render '/refinery/admin/error_messages',
+               :object => @group,
+               :include_object_name => true %>
+
+
+    <div class='field'>
+      <%= f.label :title -%>
+      <%= f.text_field :title, :class => 'larger widest'  -%>
+    </div>
+
+    <div class='field'>
+      <%= f.label :category_ids, t('refinery.plugins.categories.title')   %>
+      <%= f.collection_select(:category_ids, Refinery::RaceRegistrations::Category.all(:order=> "title ASC"), :id, :title,
+                            { },
+                            { :data => {:placeholder=> t('.choose_categories')}, :multiple=> true, :class=> "chzn-select"}) %>
+    </div>
+
+    <%= render '/refinery/admin/form_actions', :f => f,
+               :continue_editing => false,
+               :delete_title => t('delete', :scope => 'refinery.groups.admin.groups.group'),
+               :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @group.title) %>
+<% end -%>

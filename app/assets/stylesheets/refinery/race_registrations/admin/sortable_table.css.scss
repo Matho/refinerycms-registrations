@@ -1,0 +1,40 @@
+.sortable {
+  width: 100%;
+
+  td,th {
+    padding: 4px;
+  }
+
+  td {
+    &.action img {
+      padding: 2px 4px 4px;
+      vertical-align: middle;
+    }
+
+  }
+  th {
+    background-color: #e2e2e2;
+
+    .current_th {
+      padding-right: 12px;
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    .asc {
+      background-image: image-url('refinery/race_registrations/up_arrow.png');
+    }
+    .desc {
+      background-image: image-url('refinery/race_registrations/down_arrow.png');
+    }
+
+  }
+  tr {
+    &.on {
+      background-color: #f9e3b8;
+    }
+    &.on-hover {
+    }
+
+
+  }
+}

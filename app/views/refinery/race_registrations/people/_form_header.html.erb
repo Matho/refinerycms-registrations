@@ -1,0 +1,8 @@
+<% @registrations.each do |registration| %>
+    <%= t('.end_of_registration', :title=> registration.title) %> <strong><%= l(registration.end_date, :format=> :long) %></strong><br/>
+<% end %>
+
+<br/><span class="use_diacritics"><%= t('.please_use_diacritics') %></span>
+<p></p>
+<p></p>
+

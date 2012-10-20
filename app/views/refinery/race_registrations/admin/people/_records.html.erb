@@ -1,0 +1,11 @@
+<div class='pagination_container'>
+  <%= render 'people' %>
+  <p>
+    <% if @people.empty? %>
+        <%= t('no_results', :scope => 'refinery.admin.search') %>
+    <% end %>
+  </p>
+</div>
+
+<%= hidden_field_tag :direction, sort_direction %>
+<%= hidden_field_tag :sort, sort_column %>

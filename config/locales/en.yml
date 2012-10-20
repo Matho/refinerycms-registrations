@@ -1,0 +1,136 @@
+en:
+  refinery:
+    plugins:
+      groups:
+        title: Groups
+      categories:
+        title: Categories
+      people:
+        title: People
+      registrations:
+        title: Registrations
+    race_registrations:
+      admin:
+        submenu:
+          manage: Manage
+        groups:
+          form:
+            choose_categories: Choose categories
+          actions:
+            create_new: Add New Group
+            reorder: Reorder Groups
+            reorder_done: Done Reordering Groups
+          records:
+            title: Groups
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Groups yet. Click "Add New Group" to add your
+              first group.
+          group:
+            view_live_html: View this group live <br/><em>(opens in a new window)</em>
+            edit: Edit this group
+            delete: Remove this group forever
+        categories:
+          actions:
+            create_new: Add New Category
+            reorder: Reorder Categories
+            reorder_done: Done Reordering Categories
+          records:
+            title: Categories
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Categories yet. Click "Add New Category" to
+              add your first category.
+          category:
+            view_live_html: View this category live <br/><em>(opens in a new window)</em>
+            edit: Edit this category
+            delete: Remove this category forever
+        people:
+          index:
+            choose_registrations: Choose registrations
+            filter: Filter
+            search: Search
+          form:
+            choose_category: Choose category
+          actions:
+            create_new: Add New Person
+            reorder: Reorder People
+            reorder_done: Done Reordering People
+          records:
+            title: People
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no People yet. Click "Add New Person" to add your
+              first person.
+          person:
+            view_live_html: View this person live <br/><em>(opens in a new window)</em>
+            edit: Edit this person
+            delete: Remove this person forever
+        registrations:
+          form:
+            choose_groups: Choose group of categories
+          actions:
+            create_new: Add New Registration
+            reorder: Reorder Registrations
+            reorder_done: Done Reordering Registrations
+          records:
+            title: Registrations
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Registrations yet. Click "Add New Registration"
+              to add your first registration.
+          registration:
+            view_live_html: View this registration live <br/><em>(opens in a new window)</em>
+            edit: Edit this registration
+            delete: Remove this registration forever
+      groups:
+        show:
+          other: Other Groups
+      categories:
+        show:
+          other: Other Categories
+      people:
+        form_header:
+          end_of_registration: 'Registration %{title} ends up at '
+          please_use_diacritics: 'Please, use diacritics. Thanks'
+        form:
+          club_if_you_have: Club (if none leave blank)
+          save_registration: Save registration
+          country:
+            different: different
+        new:
+          no_registration: No active registration.
+        show:
+          other: Other People
+      registrations:
+        registration:
+          number_of_registered_people: "Number of registered people:"
+          sorry_no_registrations: 'Sorry, no registration found.'
+        registration_chooser:
+          show: Zobraziť
+        show:
+          other: Other Registrations
+  activerecord:
+    attributes:
+      refinery/race_registrations/group:
+        title: Title
+        category_ids: Categories
+      refinery/race_registrations/category:
+        title: Title
+      refinery/race_registrations/person:
+        id: ID
+        name: Name
+        surname: Surname
+        country: Country
+        birth_date: Birth Date
+        email: Email
+        club: Club
+        city: City
+        notice: Notice
+        created_at: Date of registration
+        registration_id: Registration ID
+        category_id: Category ID
+        humanizer_answer: Antispam
+      refinery/race_registrations/registration:
+        title: Title
+        locality: Locality
+        race_date: Race Date
+        is_active: Is Active
+        start_date: Start Date
+        end_date: End Date

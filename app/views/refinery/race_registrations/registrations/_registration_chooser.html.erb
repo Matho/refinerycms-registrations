@@ -1,0 +1,7 @@
+<%= form_for :registration , :url=> refinery.redirect_race_registrations_registrations_path, :html=> {:onchange =>"$(this).submit();" } do |f| %>
+    <%= f.label :title %>
+    <%= f.collection_select :id, Refinery::RaceRegistrations::Registration.all, :id, :title  %>
+
+    <%= f.submit t('.show') %>
+
+<% end %>

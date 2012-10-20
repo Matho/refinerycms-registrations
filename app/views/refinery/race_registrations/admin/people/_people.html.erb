@@ -1,0 +1,14 @@
+<%= will_paginate @people if Refinery::RaceRegistrations::Admin::PeopleController.pageable? %>
+<table border="0" class="sortable">
+  <tr>
+    <th  ><%= sortable "id", t('activerecord.attributes.refinery/race_registrations/person.id') %></th>
+    <th ><%= sortable "surname", t('activerecord.attributes.refinery/race_registrations/person.surname') %></th>
+    <th ><%= sortable "name", t('activerecord.attributes.refinery/race_registrations/person.name') %></th>
+    <th ><%= sortable "country", t('activerecord.attributes.refinery/race_registrations/person.country') %></th>
+    <th style="width: 70px;"><%= sortable "birth_date", t('activerecord.attributes.refinery/race_registrations/person.birth_date') %></th>
+    <th ><%= sortable "club", t('activerecord.attributes.refinery/race_registrations/person.club') %></th>
+    <th ><%= sortable "city", t('activerecord.attributes.refinery/race_registrations/person.city') %></th>
+    <th style="width: 60px;"></th>
+  </tr>
+  <%= render :partial => 'person', :collection => @people %>
+</table>

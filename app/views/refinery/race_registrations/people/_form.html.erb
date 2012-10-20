@@ -1,0 +1,81 @@
+<%= render :partial=>"form_header" %>
+<%#TODO club autocomplete %>
+
+<%= form_for [refinery, :race_registrations, @person] do |f| -%>
+    <%= render '/refinery/admin/error_messages',
+               :object => @person,
+               :include_object_name => true %><br/>
+
+
+
+    <div class='field'>
+      <%= f.label :registration_id %>
+      <%= f.collection_select(:registration_id, @registrations, :id, :title,
+                              (@registrations.length == 1) ?  {} : {:prompt=> :true},
+                              { :data => {:placeholder=> t('.choose_registration')}, :multiple=> false, :class=> "chzn-select"}) %>
+    </div>
+
+
+    <div class='field' >
+      <%= f.label :category_id %>
+      <%= f.collection_select(:category_id, @categories, :id, :title,
+                              (@categories.length == 1) ? {} : { :prompt => :true },
+                              { :data => {:placeholder=> t('.choose_category')}, :multiple=> false, :class=> "chzn-select"}) %>
+    </div>
+
+    <div class='field'>
+      <%= f.label :name -%>
+      <%= f.text_field :name  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :surname -%>
+      <%= f.text_field :surname  -%>
+    </div>
+
+    <div class='field'>
+      <%= f.label :email -%>
+      <%= f.text_field :email  -%>
+    </div>
+
+    <div class='field'>
+      <%= f.label :birth_date -%>
+      <%= f.date_select :birth_date , :start_year => 1910, :include_blank=> true -%>
+    </div>
+
+    <div class='field'>
+      <%= f.label :club, t('.club_if_you_have'), :id=>"label_person_club" -%>
+      <%= f.text_field :club  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :city -%>
+      <%= f.text_field :city  -%>
+    </div>
+
+    <div class='field'>
+      <label for="person_country_select"><%= t('activerecord.attributes.refinery/race_registrations/person.country') %></label>
+
+      <select id="person_country_select" name="person[country]">
+        <option value=""></option>
+        <option value="SVK">SVK</option>
+        <option value="CZE">CZE</option>
+        <option value="POL">POL</option>
+        <option value="POL">HUN</option>
+        <option value="AUT">AUT</option>
+        <option value="" onclick="$('#person_country_select').replaceWith('<input type=text name=person[country] >');"><%= t('.country.different') %></option>
+      </select>
+    </div>
+
+
+    <div class='field' >
+      <%= f.label :humanizer_answer, @person.humanizer_question %>
+      <%= f.text_field :humanizer_answer %>
+      <%= f.hidden_field :humanizer_question_id %>
+    </div>
+
+    <%= f.submit t('.save_registration') %>
+<% end -%>
+

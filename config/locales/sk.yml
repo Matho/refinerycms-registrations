@@ -1,0 +1,138 @@
+sk:
+  refinery:
+    plugins:
+      groups:
+        title: Skupiny kategórií
+      categories:
+        title: Kategórie
+      people:
+        title: Ľudia
+      registrations:
+        title: Registrácie
+    race_registrations:
+      admin:
+        submenu:
+          manage: Spravovať
+        groups:
+          form:
+            choose_categories: Vyberte kategórie
+          actions:
+            create_new: Pridať skupinu kategórií
+            reorder: Preusporiadať skupiny kategórií
+            reorder_done: Uložiť usporiadanie skupiny kategórií
+          records:
+            title: Skupiny kategórií
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne skupiny kategórií. Kliknite na "Pridať skupiny kategórií"
+              pre pridanie prvej.
+          group:
+            view_live_html: Zobraziť náhľad skupiny kategórií<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť skupinu kategórií
+            delete: Zmazať skupinu kategórií
+        categories:
+          actions:
+            create_new: Pridať kategóriu
+            reorder: Preusporiadať kategórie
+            reorder_done: Uložiť usporiadanie kategórií
+          records:
+            title: Kategórie
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne kategórie. Kliknite na "Pridať
+              kategóriu" pre pridanie prvej.
+          category:
+            view_live_html: Zobraziť náhľad kategórie<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť kategóriu
+            delete: Zmazať kategóriu
+        people:
+          index:
+            choose_registrations: Vyberte registrácie
+            filter: Filter
+            search: Vyhľadávanie
+          form:
+            choose_category: Vyberte kategóriu
+          actions:
+            create_new: Pridať osobu
+            reorder: Preusporiadať osoby
+            reorder_done: Uložiť usporiadanie
+          records:
+            title: Ľudia
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú zaregistrované žiadne osoby. Kliknite na "Pridať
+              osobu"  re pridanie prvej osoby.
+          person:
+            view_live_html: Zobraziť náhľad osoby<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť osobu
+            delete: Zmazať osobu
+        registrations:
+          form:
+            choose_groups: Vyberte skupiny kategórií
+          actions:
+            create_new: Pridať registráciu
+            reorder: Preusporiadať registrácie
+            reorder_done: Uložiť usporiadanie
+          records:
+            title: Registrácie
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne registrácie. Kliknite na "Pridať
+              registráciu" pre pridanie prvej registrácie.
+          registration:
+            view_live_html: Zobraziť náhľad registrácie<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť registráciu
+            delete: Zmazať registráciu
+      groups:
+        show:
+          other: Daľšie skupiny kategórií
+      categories:
+        show:
+          other: Daľšie kategórie
+      people:
+        form_header:
+          end_of_registration: 'Registrácia na %{title} končí '
+          please_use_diacritics: 'Prosím, dodržujte diakritiku a veľkosť písmen. Ďakujeme.'
+        form:
+          club_if_you_have: Klub (ak jazdíš za klub)
+          save_registration: Odoslať registráciu
+          country:
+            different: iný
+        new:
+          no_registration: Momentálne neprebieha žiadna registrácia.
+        show:
+          other: Daľšie osoby
+      registrations:
+        registration:
+          number_of_registered_people: 'Priebežne zaregistrovaných jazdcov:'
+          sorry_no_registrations: 'Ľutujeme, hľadaná registrácia sa nenašla.'
+        registration_chooser:
+          show: Zobraziť
+        show:
+          other: Daľšie registrácie
+
+  activerecord:
+    attributes:
+      refinery/race_registrations/group:
+        title: Názov
+        category_ids: Kategórie
+      refinery/race_registrations/category:
+        title: Názov
+      refinery/race_registrations/person:
+        id: ID
+        name: Meno
+        surname: Priezvisko
+        country: Štát
+        birth_date: Dátum narodenia
+        email: E-mail
+        club: Klub
+        city: Mesto
+        notice: Poznámka
+        created_at: Dátum registrácie
+        registration_id: Pretek
+        category_id: Kategória
+        humanizer_answer: Antispam
+      refinery/race_registrations/registration:
+        title: Názov
+        locality: Lokalita
+        race_date: Dátum preteku
+        is_active: Je aktívna
+        start_date: Začiatok registrácie
+        end_date: Koniec registrácie

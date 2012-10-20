@@ -1,0 +1,141 @@
+es:
+  refinery:
+    plugins:
+      groups:
+        title: Groups
+      categories:
+        title: Categories
+      people:
+        title: People
+      registrations:
+        title: Registrations
+    race_registrations:
+      admin:
+        submenu:
+          manage: Manage
+        groups:
+          form:
+            choose_categories: Choose categories
+            choose_groups:      Choose group of categories
+          actions:
+            create_new: Crear nuevo group
+            reorder: Reordenar groups
+            reorder_done: Reordenación de groups completada
+          records:
+            title: Groups
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay groups todavía. Pulsa en "Crear nuevo Group" para
+              crear tu primer group.
+          group:
+            view_live_html: Ver este group como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este group
+            delete: Borrar este group para siempre
+        categories:
+          actions:
+            create_new: Crear nuevo category
+            reorder: Reordenar categories
+            reorder_done: Reordenación de categories completada
+          records:
+            title: Categories
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay categories todavía. Pulsa en "Crear nuevo Category"
+              para crear tu primer category.
+          category:
+            view_live_html: Ver este category como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este category
+            delete: Borrar este category para siempre
+        people:
+          index:
+            choose_registrations: Choose registrations
+            filter: Filter
+            search: Search
+          form:
+            choose_category: Choose category
+          actions:
+            create_new: Crear nuevo person
+            reorder: Reordenar people
+            reorder_done: Reordenación de people completada
+          records:
+            title: People
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay people todavía. Pulsa en "Crear nuevo Person" para
+              crear tu primer person.
+          person:
+            view_live_html: Ver este person como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este person
+            delete: Borrar este person para siempre
+        registrations:
+          form:
+            choose_groups: Choose group of categories
+          actions:
+            create_new: Crear nuevo registration
+            reorder: Reordenar registrations
+            reorder_done: Reordenación de registrations completada
+          records:
+            title: Registrations
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay registrations todavía. Pulsa en "Crear nuevo Registration"
+              para crear tu primer registration.
+          registration:
+            view_live_html: Ver este registration como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este registration
+            delete: Borrar este registration para siempre
+      groups:
+        show:
+          other: Otros groups
+      categories:
+        show:
+          other: Otros categories
+      people:
+        form_header:
+          end_of_registration: 'Registration %{title} ends up at '
+          please_use_diacritics: 'Please, use diacritics. Thanks'
+        form:
+          club_if_you_have: Club (if none leave blank)
+          save_registration: Save registration
+          country:
+            different: different
+        new:
+          no_registration: No active registration.
+        show:
+          other: Otros people
+      registrations:
+        registration:
+          number_of_registered_people: "Number of registered people:"
+          sorry_no_registrations: 'Sorry, no registration found.'
+        registration_chooser:
+          show: Zobraziť
+        show:
+          other: Otros registrations
+  activerecord:
+    attributes:
+      refinery/race_registrations/group:
+        title: Title
+        category_ids: Categories
+      refinery/race_registrations/category:
+        title: Title
+      refinery/race_registrations/person:
+        id: ID
+        name: Name
+        surname: Surname
+        country: Country
+        birth_date: Birth Date
+        email: Email
+        club: Club
+        city: City
+        notice: Notice
+        created_at: Date of registration
+        registration_id: Registration ID
+        category_id: Category ID
+        humanizer_answer: Antispam
+      refinery/race_registrations/registration:
+        title: Title
+        locality: Locality
+        race_date: Race Date
+        is_active: Is Active
+        start_date: Start Date
+        end_date: End Date

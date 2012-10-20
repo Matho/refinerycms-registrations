@@ -1,0 +1,27 @@
+<section id="records" >
+  <%= form_for [refinery, :race_registrations_admin, @person] , :method => :get, :html => {:id => 'people_search_form'} do |f| -%>
+
+      <div class="filter_field" >
+        <%= f.label :registration_ids, t('.filter') %>
+        <%= f.collection_select( :registration_ids, Refinery::RaceRegistrations::Registration.all, :id, :title,
+                                 {  },
+                                 { :data => {:placeholder=> t('.choose_registrations')}, :multiple => true, :class=> "chzn-select"}) %>
+
+      </div>
+
+      <div class="search_field" >
+        <label for="search"><%= t('.search') %></label>
+        <input id='search' name='search' size='22' type='search' value='<%= params[:search] %>' />
+        <%= submit_tag t('button_text', :scope => 'refinery.admin.search'), :name => nil %>
+      </div>
+
+      <div style="clear:both;"></div>
+
+
+      <div id="race_registrations_people">
+        <%= render 'records' %>
+      </div>
+  <% end %>
+
+</section>
+<%= render "refinery/race_registrations/admin/submenu" %>

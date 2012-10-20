@@ -1,0 +1,141 @@
+nb:
+  refinery:
+    plugins:
+      groups:
+        title: Groups
+      categories:
+        title: Categories
+      people:
+        title: People
+      registrations:
+        title: Registrations
+    race_registrations:
+      admin:
+        submenu:
+          manage: Manage
+        groups:
+          form:
+            choose_categories: Choose categories
+            choose_groups:      Choose group of categories
+          actions:
+            create_new: Lag en ny Group
+            reorder: Endre rekkefølgen på Groups
+            reorder_done: Ferdig å endre rekkefølgen Groups
+          records:
+            title: Groups
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Groups enda. Klikk på "Lag en ny Group" for
+              å legge til din første group.
+          group:
+            view_live_html: Vis hvordan denne group ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne group
+            delete: Fjern denne group permanent
+        categories:
+          actions:
+            create_new: Lag en ny Category
+            reorder: Endre rekkefølgen på Categories
+            reorder_done: Ferdig å endre rekkefølgen Categories
+          records:
+            title: Categories
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Categories enda. Klikk på "Lag en ny Category"
+              for å legge til din første category.
+          category:
+            view_live_html: Vis hvordan denne category ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne category
+            delete: Fjern denne category permanent
+        people:
+          index:
+            choose_registrations: Choose registrations
+            filter: Filter
+            search: Search
+          form:
+            choose_category: Choose category
+          actions:
+            create_new: Lag en ny Person
+            reorder: Endre rekkefølgen på People
+            reorder_done: Ferdig å endre rekkefølgen People
+          records:
+            title: People
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen People enda. Klikk på "Lag en ny Person" for
+              å legge til din første person.
+          person:
+            view_live_html: Vis hvordan denne person ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne person
+            delete: Fjern denne person permanent
+        registrations:
+          form:
+            choose_groups: Choose group of categories
+          actions:
+            create_new: Lag en ny Registration
+            reorder: Endre rekkefølgen på Registrations
+            reorder_done: Ferdig å endre rekkefølgen Registrations
+          records:
+            title: Registrations
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Registrations enda. Klikk på "Lag en ny Registration"
+              for å legge til din første registration.
+          registration:
+            view_live_html: Vis hvordan denne registration ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne registration
+            delete: Fjern denne registration permanent
+      groups:
+        show:
+          other: Andre Groups
+      categories:
+        show:
+          other: Andre Categories
+      people:
+        form_header:
+          end_of_registration: 'Registration %{title} ends up at '
+          please_use_diacritics: 'Please, use diacritics. Thanks'
+        form:
+          club_if_you_have: Club (if none leave blank)
+          save_registration: Save registration
+          country:
+            different: different
+        new:
+          no_registration: No active registration.
+        show:
+          other: Andre People
+      registrations:
+        registration:
+          number_of_registered_people: "Number of registered people:"
+          sorry_no_registrations: 'Sorry, no registration found.'
+        registration_chooser:
+          show: Zobraziť
+        show:
+          other: Andre Registrations
+  activerecord:
+    attributes:
+      refinery/race_registrations/group:
+        title: Title
+        category_ids: Categories
+      refinery/race_registrations/category:
+        title: Title
+      refinery/race_registrations/person:
+        id: ID
+        name: Name
+        surname: Surname
+        country: Country
+        birth_date: Birth Date
+        email: Email
+        club: Club
+        city: City
+        notice: Notice
+        created_at: Date of registration
+        registration_id: Registration ID
+        category_id: Category ID
+        humanizer_answer: Antispam
+      refinery/race_registrations/registration:
+        title: Title
+        locality: Locality
+        race_date: Race Date
+        is_active: Is Active
+        start_date: Start Date
+        end_date: End Date

@@ -1,0 +1,54 @@
+<%= form_for [refinery, :race_registrations_admin, @registration] do |f| -%>
+    <%= render '/refinery/admin/error_messages',
+               :object => @registration,
+               :include_object_name => true %>
+
+
+    <div class='field'>
+      <%= f.label :title -%>
+      <%= f.text_field :title, :class => 'larger widest'  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :locality -%>
+      <%= f.text_field :locality  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :race_date -%>
+      <%= f.date_select :race_date  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :group_id, t('refinery.plugins.groups.title')   %>
+      <%= f.collection_select(:group_id, Refinery::RaceRegistrations::Group.all(:order=> "position DESC"), :id, :title,
+                              { :include_blank => true },
+                              { :data => {:placeholder=> t('.choose_groups')}, :multiple=> false, :class=> "chzn-select"}) %>
+    </div>
+
+    <div class='field'>
+      <%= f.label :is_active -%>
+      <%= f.check_box :is_active, :checked => @registration[:is_active]  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :start_date -%>
+      <%= f.datetime_select :start_date  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :end_date -%>
+      <%= f.datetime_select :end_date  -%>
+
+    </div>
+
+    <%= render '/refinery/admin/form_actions', :f => f,
+               :continue_editing => false,
+               :delete_title => t('delete', :scope => 'refinery.registrations.admin.registrations.registration'),
+               :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @registration.title) %>
+<% end -%>

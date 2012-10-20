@@ -1,0 +1,9 @@
+sk:
+  humanizer:
+    validation:
+      error: zle vyplnený
+    questions:
+      - question: Prepíš slovo antispam
+        answers: ["antispam"]
+      - question: Prepíš slovo internet
+        answers: ["internet"]

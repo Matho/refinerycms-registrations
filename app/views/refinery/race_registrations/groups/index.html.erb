@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="groups">
+    <% @groups.each do |group| %>
+      <li>
+        <%= link_to group.title, refinery.race_registrations_group_path(group) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,27 @@
+<% content_for :body_content_title do %>
+  <%= @group.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @group.title %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="groups">
+      <% @groups.each do |group| %>
+        <li>
+          <%= link_to group.title, refinery.race_registrations_group_path(group) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

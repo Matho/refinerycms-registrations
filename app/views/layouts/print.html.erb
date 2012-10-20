@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+<%= render '/refinery/head' %>
+<body>
+<div id="page_container">
+  <div id="page_padding">
+    <section id="page">
+      <%= yield %>
+    </section>
+  </div>
+</div>
+<%= render '/refinery/javascripts' %>
+</body>
+</html>

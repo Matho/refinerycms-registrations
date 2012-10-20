@@ -1,0 +1,15 @@
+<%= render :partial=> "left_body_content" %>
+
+<section id='middle_body_content'>
+  <div class="body">
+    <%= render "middle_body_header" %>
+
+    <%= raw content_of(@page, :middle_body)  %>
+
+    <%= render "refinery/race_registrations/registrations/index" %>
+  </div>
+
+  <%= render "author_info" %>
+</section>
+
+<%= render :partial=>"right_body_content" %>

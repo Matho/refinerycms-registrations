@@ -1,0 +1,77 @@
+<nav id='actions' class='multilist'>
+  <ul class='search_list'>
+    <li class='not_a_link'>
+      <% resource = params[:controller].split(/\//).last %>
+      <% if resource != "people" %>
+          <%= render :partial => "/refinery/admin/search",
+                     :locals => {
+                             :url => eval("refinery.race_registrations_admin_#{resource}_path")
+                     } %>
+      <% end %>
+    </li>
+  </ul>
+
+  <ul  class='collapsible_menu'>
+    <li class='not_a_link'>
+      <%= link_to t('refinery.plugins.registrations.title'), '#',
+                  :class => 'folder_icon' %>
+    </li>
+    <li>
+      <%= link_to t('.manage'), refinery.race_registrations_admin_registrations_path,
+                  :class => 'folder_icon' %>
+    </li>
+    <li>
+      <%= link_to t('refinery.race_registrations.admin.registrations.actions.create_new'), refinery.new_race_registrations_admin_registration_path,
+                  :class => 'add_icon' %>
+    </li>
+  </ul>
+
+  <ul  class='collapsible_menu'>
+    <li class='not_a_link'>
+      <%= link_to t('refinery.plugins.people.title'), '#',
+                  :class => 'folder_icon' %>
+    </li>
+    <li>
+      <%= link_to t('.manage'), refinery.race_registrations_admin_people_path,
+                  :class => 'folder_icon' %>
+    </li>
+    <li>
+      <%= link_to t('refinery.race_registrations.admin.people.actions.create_new'), refinery.new_race_registrations_admin_person_path,
+                  :class => 'add_icon' %>
+    </li>
+  </ul>
+
+  <ul  class='collapsible_menu'>
+    <li class='not_a_link'>
+      <%= link_to t('refinery.plugins.groups.title'), '#',
+                  :class => 'folder_icon' %>
+    </li>
+    <li>
+      <%= link_to t('.manage'), refinery.race_registrations_admin_groups_path,
+                  :class => 'folder_icon' %>
+    </li>
+    <li>
+      <%= link_to t('refinery.race_registrations.admin.groups.actions.create_new'), refinery.new_race_registrations_admin_group_path,
+                  :class => 'add_icon' %>
+    </li>
+  </ul>
+
+
+
+  <ul  class='collapsible_menu'>
+    <li class='not_a_link'>
+      <%= link_to t('refinery.plugins.categories.title'), '#',
+                  :class => 'folder_icon' %>
+    </li>
+    <li>
+      <%= link_to t('.manage'), refinery.race_registrations_admin_categories_path,
+                  :class => 'folder_icon' %>
+    </li>
+    <li>
+      <%= link_to t('refinery.race_registrations.admin.categories.actions.create_new'), refinery.new_race_registrations_admin_category_path,
+                  :class => 'add_icon' %>
+    </li>
+  </ul>
+
+</nav>
+
