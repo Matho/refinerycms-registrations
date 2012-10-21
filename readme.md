@@ -93,18 +93,3 @@ TODO
 ## License
 
 Refinery CMS Photo Gallery engine is released under the MIT license. Created by Martin Markech.
-
-
-
-
-
-
-
-
-
-
-
-
-- potrebujes mat chosen
-
-- gem 'humanizer' v app gemfile
