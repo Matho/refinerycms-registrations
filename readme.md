@@ -21,9 +21,9 @@ This version of refinerycms-registrations supports Rails 3.2.x and Refinery CMS 
 
 All screenshots are in folder screenshots
 
-![Edit registration](https://raw.github.com/Matho/refinerycms-photo-gallery/master/screenshots/02_edit_registration.png)
-![Live search people](https://raw.github.com/Matho/refinerycms-photo-gallery/master/screenshots/05_live_search_people.png)
-![List of people](https://raw.github.com/Matho/refinerycms-photo-gallery/master/screenshots/12_list_of_registered_people.png)
+![Edit registration](https://raw.github.com/Matho/refinerycms-registrations/master/screenshots/02_edit_registration.png)
+![Live search people](https://raw.github.com/Matho/refinerycms-registrations/master/screenshots/05_live_search_people.png)
+![List of people](https://raw.github.com/Matho/refinerycms-registrations/master/screenshots/12_list_of_registered_people.png)
 
 ## Language
 
