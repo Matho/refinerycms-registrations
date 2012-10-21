@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name              = 'refinerycms-registrations'
   s.version           = '0.1.0'
   s.description       = 'Ruby on Rails race registrations extension for Refinery CMS'
-  s.date              = '2012-09-30'
+  s.date              = '2012-10-21'
   s.summary           = 'Race registrations extension for Refinery CMS'
   s.authors           = ['Martin Markech']
   s.email             = %q{martin.markech@matho.sk}
