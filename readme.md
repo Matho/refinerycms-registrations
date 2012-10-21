@@ -92,4 +92,4 @@ TODO
 
 ## License
 
-Refinery CMS Photo Gallery engine is released under the MIT license. Created by Martin Markech.
+Refinery CMS Registrations engine is released under the MIT license. Created by Martin Markech.
