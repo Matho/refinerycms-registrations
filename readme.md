@@ -81,6 +81,9 @@ rake assets:precompile
 * autocomplete in Club
 * tests
 
+## Code
+
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Matho/refinerycms-registrations)
 
 ## Known bugs
 
