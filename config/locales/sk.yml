@@ -9,6 +9,8 @@ sk:
         title: Ľudia
       registrations:
         title: Registrácie
+      refinerycms-registrations:
+        title: Registrácie
     race_registrations:
       admin:
         submenu:

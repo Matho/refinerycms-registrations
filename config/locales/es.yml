@@ -9,6 +9,8 @@ es:
         title: People
       registrations:
         title: Registrations
+      refinerycms-registrations:
+        title: Registrations
     race_registrations:
       admin:
         submenu:
