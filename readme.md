@@ -37,7 +37,6 @@ Open up your ``Gemfile`` and add at the bottom this line:
 
 ```ruby
 gem 'refinerycms-registrations', '~> 0.1.0'
-gem 'humanizer'
 ```
 
 Now, run
@@ -85,9 +84,6 @@ rake assets:precompile
 
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Matho/refinerycms-registrations)
 
-## Known bugs
-
-* Humanizer don't work as engine dependency, you must include gem 'humanizer' in your app gemfile
 
 ## Testing
 

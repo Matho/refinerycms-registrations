@@ -20,6 +20,7 @@ module Refinery
 
       config.to_prepare do
         require 'refinerycms-pages'
+        require 'humanizer'
         Refinery::PagesController.send :include, Refinery::RaceRegistrations::Extensions::PagesController
       end
 
