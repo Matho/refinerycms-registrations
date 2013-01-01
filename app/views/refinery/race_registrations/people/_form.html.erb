@@ -1,7 +1,7 @@
 <%= render :partial=>"form_header" %>
 <%#TODO club autocomplete %>
 
-<%= form_for [refinery, :race_registrations, @person] do |f| -%>
+<%= form_for [refinery, :race_registrations, @person], :validate=>false do |f| -%>
     <%= render '/refinery/admin/error_messages',
                :object => @person,
                :include_object_name => true %><br/>
