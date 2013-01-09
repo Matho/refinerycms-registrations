@@ -4,5 +4,6 @@ Refinery::Core.configure do |config|
 
   #Register extra stylesheet for backend (optional options)
   config.register_stylesheet "refinery/race_registrations/admin/race_registrations.css"
+  config.register_stylesheet "refinery/race_registrations/admin/sortable_table.css"
 end
 
