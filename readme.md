@@ -69,6 +69,11 @@ If you don't have Chosen JS included in your backend yet, append this code to yo
  config.register_stylesheet "refinery/race_registrations/admin/chosen.css"
 ```
 
+To config/initializers/mime_types add:
+```
+Mime::Type.register "application/xls", :xls
+```
+
 Before production, don't forget to precompile assets by:
 
 ```ruby

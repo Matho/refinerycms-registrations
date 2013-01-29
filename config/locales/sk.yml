@@ -103,6 +103,7 @@ sk:
           other: Daľšie osoby
       registrations:
         registration:
+          download: "Stiahnuť"
           number_of_registered_people: 'Priebežne zaregistrovaných jazdcov:'
           sorry_no_registrations: 'Ľutujeme, hľadaná registrácia sa nenašla.'
         registration_chooser:
@@ -118,6 +119,7 @@ sk:
       refinery/race_registrations/category:
         title: Názov
       refinery/race_registrations/person:
+        num: P.č.
         id: ID
         name: Meno
         surname: Priezvisko

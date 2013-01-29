@@ -22,6 +22,11 @@ module Refinery
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @registration in the line below:
         present(@page)
+
+        respond_to do |format|
+          format.html
+          format.xls
+        end
       end
 
       protected

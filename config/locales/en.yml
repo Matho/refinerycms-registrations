@@ -102,6 +102,7 @@ en:
           other: Other People
       registrations:
         registration:
+          download: "Download"
           number_of_registered_people: "Number of registered people:"
           sorry_no_registrations: 'Sorry, no registration found.'
         registration_chooser:
@@ -116,6 +117,7 @@ en:
       refinery/race_registrations/category:
         title: Title
       refinery/race_registrations/person:
+        num: Num
         id: ID
         name: Name
         surname: Surname

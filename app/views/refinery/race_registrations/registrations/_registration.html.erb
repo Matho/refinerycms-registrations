@@ -2,7 +2,12 @@
     <h2><%= @registration.title %></h2>
     <h3><%= @registration.locality %> <%= @registration.race_date.strftime("%d.%m.%Y") %></h3>
 
-    <p><%= t('.number_of_registered_people') %> <%= @registration.people.count %></p>
+    <p style="float: left;"><%= t('.number_of_registered_people') %> <%= @registration.people.count %></p>
+
+    <p style="float: right;">
+      <%= link_to image_tag('refinery/race_registrations/xls.gif') << t('.download') << ' ' , refinery.race_registrations_registration_path(@registration, format: "xls") %>
+    </p>
+    <p style="clear:both;"></p>
 
 
      <%= render :partial => '/refinery/message' %>

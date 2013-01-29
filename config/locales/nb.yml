@@ -121,6 +121,7 @@ nb:
       refinery/race_registrations/category:
         title: Title
       refinery/race_registrations/person:
+        num: Num
         id: ID
         name: Name
         surname: Surname

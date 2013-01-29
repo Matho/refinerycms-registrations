@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:o="urn:schemas-microsoft-com:office:office"
+          xmlns:x="urn:schemas-microsoft-com:office:excel"
+          xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+
+
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">
+          <b><%= @registration.title %></b>
+        </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">
+          <B><%= @registration.locality %> <%= @registration.race_date.strftime("%d.%m.%Y") %></B>
+        </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">
+          <B><%= t('refinery.race_registrations.registrations.registration.number_of_registered_people') %> <%= @registration.people.count %></B>
+        </Data>
+        </Cell>
+      </Row>
+
+
+      <% @registration.categories.each do |category| %>
+          <% people_in_category =  @registration.people.in_category(category.id, sort_column(), sort_direction() )  %>
+
+          <% if people_in_category.count > 0 %>
+
+              <Row>
+                <Cell><Data ss:Type="String"><B><%= category.title %></B></Data></Cell>
+              </Row>
+              <Row>
+                <Cell><Data ss:Type="String"><%= t('activerecord.attributes.refinery/race_registrations/person.num') %></Data></Cell>
+                <Cell><Data ss:Type="String"><%= t('activerecord.attributes.refinery/race_registrations/person.surname') %></Data></Cell>
+                <Cell><Data ss:Type="String"><%= t('activerecord.attributes.refinery/race_registrations/person.name') %></Data></Cell>
+                <Cell><Data ss:Type="String"><%= t('activerecord.attributes.refinery/race_registrations/person.country') %></Data></Cell>
+                <Cell><Data ss:Type="String"><%= t('activerecord.attributes.refinery/race_registrations/person.birth_date') %></Data></Cell>
+                <Cell><Data ss:Type="String"><%= t('activerecord.attributes.refinery/race_registrations/person.club') %></Data></Cell>
+                <Cell><Data ss:Type="String"><%= t('activerecord.attributes.refinery/race_registrations/person.city') %></Data></Cell>
+                <Cell><Data ss:Type="String"><%= t('activerecord.attributes.refinery/race_registrations/person.created_at') %></Data></Cell>
+              </Row>
+
+              <% people_in_category.each_with_index do |person,index| %>
+                  <Row>
+                    <Cell><Data ss:Type="String"><%= index + 1 %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= person.surname %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= person.name %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= person.country %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= person.birth_date %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= person.club %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= person.city %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= person.created_at.strftime("%d.%m.%Y %H:%M") %></Data></Cell>
+                  </Row>
+              <% end %>
+
+          <% end %>
+          <Row>
+            <Cell>
+              <Data ss:Type="String">
+
+              </Data>
+            </Cell>
+          </Row>
+      <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+
