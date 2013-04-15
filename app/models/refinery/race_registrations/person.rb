@@ -35,7 +35,11 @@ module Refinery
       scope :in_category, lambda {|category_id, sort_column, sort_direction| where("category_id = ?", category_id).order(sort_column + " " + sort_direction)  }
 
       def self.search(search, sort, person)
-        registration_ids =  person[:registration_ids].select{|reg_id| reg_id.to_i > 0  } if person.present?
+        registration_ids = nil
+
+        if person.present? && person[:registration_ids].present?
+          registration_ids =  person[:registration_ids].select{|reg_id| reg_id.to_i > 0  }
+        end
 
         if search
           if sort != ""

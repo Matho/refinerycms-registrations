@@ -31,13 +31,12 @@ module Refinery
             )
 
             find_all_people
-            render :index
+            render :edit
           else
             render :action => 'new'
           end
 
         end
-
 
         def edit
           # @person comes from crud before_filter
