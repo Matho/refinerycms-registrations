@@ -7,7 +7,7 @@ module Refinery
           css_class = column == sort_column ? "current_th #{sort_direction}" : nil
           direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
 
-          options = {:sort => column, :direction => direction, :page => nil, :person => params[:person]}
+          options = {:sort => column, :direction => direction, :page => nil, :person => params[:person], :search=> params[:search]}
 
           link_to title, refinery.race_registrations_admin_people_path(options), {:class => css_class} 
        end
