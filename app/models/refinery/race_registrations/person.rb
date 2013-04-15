@@ -44,7 +44,7 @@ module Refinery
             search_by_sort_and_registration_ids(search,"surname",registration_ids)
           end
         else
-          scoped
+          search_by_registration_ids(registration_ids)
         end
       end
 
