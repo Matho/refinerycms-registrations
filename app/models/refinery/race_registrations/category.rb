@@ -3,13 +3,9 @@ module Refinery
     class Category < Refinery::Core::BaseModel
       has_many :group_categories
       has_many :groups, :through => :group_categories
-      has_many :people , :order => "surname ASC"
+      has_many :people
 
-      default_scope order("position DESC")
-
-      attr_accessible :title, :position
-
-      acts_as_indexed :fields => [:title]
+      default_scope { order("position DESC") }
 
       validates :title, :presence => true, :uniqueness => true
     end

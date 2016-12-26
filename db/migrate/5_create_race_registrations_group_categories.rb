@@ -1,7 +1,7 @@
 class CreateRaceRegistrationsGroupCategories < ActiveRecord::Migration
 
   def up
-    create_table :refinery_race_registrations_group_categories do |t|
+    create_table Refinery::RaceRegistrations::GroupCategory.table_name  do |t|
       t.integer :group_id
       t.integer :category_id
     end

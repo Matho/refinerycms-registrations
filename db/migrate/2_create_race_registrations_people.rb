@@ -1,7 +1,7 @@
 class CreateRaceRegistrationsPeople < ActiveRecord::Migration
 
   def up
-    create_table :refinery_race_registrations_people do |t|
+    create_table Refinery::RaceRegistrations::Person.table_name  do |t|
       t.string :name
       t.string :surname
       t.string :country

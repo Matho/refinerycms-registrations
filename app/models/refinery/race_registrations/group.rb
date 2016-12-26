@@ -5,9 +5,6 @@ module Refinery
       has_many :categories, :through => :group_categories
       has_many  :registration
 
-      attr_accessible :title, :position, :category_ids
-
-      acts_as_indexed :fields => [:title]
 
       validates :title, :presence => true, :uniqueness => true
 

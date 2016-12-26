@@ -7,6 +7,13 @@ module Refinery
                 :order => "position DESC",
                 :xhr_paging => true
 
+
+        protected
+
+        def group_params
+          params.require(:group).permit(:title, :position, :category_ids)
+        end
+
       end
     end
   end

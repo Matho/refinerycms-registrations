@@ -8,7 +8,6 @@ module Refinery
       belongs_to :category
 
 
-      attr_accessible :name, :surname, :country, :birth_date, :email, :club, :city, :notice, :position, :registration_id, :category_id, :humanizer_answer, :humanizer_question_id
       attr_accessor   :registration_ids, :bypass_humanizer
 
       validates :name,            :presence => true , :length => { :minimum => 2 }

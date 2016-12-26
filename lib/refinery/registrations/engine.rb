@@ -11,9 +11,6 @@ module Refinery
           plugin.name = "refinerycms-registrations"
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.race_registrations_admin_registrations_path }
           plugin.pathname = root
-          plugin.activity = {
-            :class_name => :'refinery/race_registrations/registration'
-          }
           plugin.menu_match = %r{refinery/race_registrations(/.+)?$}
         end
       end

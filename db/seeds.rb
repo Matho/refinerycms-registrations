@@ -1,4 +1,4 @@
-(Refinery.i18n_enabled? ? Refinery::I18n.frontend_locales : [:en]).each do |lang|
+( Refinery::I18n.frontend_locales ).each do |lang|
   I18n.locale = lang
 
   if defined?(Refinery::User)
@@ -24,7 +24,7 @@
   end
 end
 
-(Refinery.i18n_enabled? ? Refinery::I18n.frontend_locales : [:en]).each do |lang|
+(Refinery::I18n.frontend_locales).each do |lang|
   I18n.locale = lang
 
   if defined?(Refinery::User)

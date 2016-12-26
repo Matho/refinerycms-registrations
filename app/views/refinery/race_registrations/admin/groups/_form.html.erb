@@ -11,7 +11,7 @@
 
     <div class='field'>
       <%= f.label :category_ids, t('refinery.plugins.categories.title')   %>
-      <%= f.collection_select(:category_ids, Refinery::RaceRegistrations::Category.all(:order=> "title ASC"), :id, :title,
+      <%= f.collection_select(:category_ids, Refinery::RaceRegistrations::Category.all.order("title ASC"), :id, :title,
                             { },
                             { :data => {:placeholder=> t('.choose_categories')}, :multiple=> true, :class=> "chzn-select"}) %>
     </div>

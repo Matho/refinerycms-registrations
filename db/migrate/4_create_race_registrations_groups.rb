@@ -1,7 +1,7 @@
 class CreateRaceRegistrationsGroups < ActiveRecord::Migration
 
   def up
-    create_table :refinery_race_registrations_groups do |t|
+    create_table Refinery::RaceRegistrations::Group.table_name  do |t|
       t.string :title
       t.integer :position
 

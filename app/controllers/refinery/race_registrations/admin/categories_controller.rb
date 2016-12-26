@@ -27,6 +27,12 @@ module Refinery
 
         end
 
+        protected
+
+        def category_params
+          params.require(:category).permit(:title,:position)
+        end
+
       end
     end
   end

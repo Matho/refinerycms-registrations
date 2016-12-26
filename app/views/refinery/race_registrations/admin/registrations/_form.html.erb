@@ -24,7 +24,7 @@
 
     <div class='field'>
       <%= f.label :group_id, t('refinery.plugins.groups.title')   %>
-      <%= f.collection_select(:group_id, Refinery::RaceRegistrations::Group.all(:order=> "position DESC"), :id, :title,
+      <%= f.collection_select(:group_id, Refinery::RaceRegistrations::Group.all.order("position DESC"), :id, :title,
                               { :include_blank => true },
                               { :data => {:placeholder=> t('.choose_groups')}, :multiple=> false, :class=> "chzn-select"}) %>
     </div>
