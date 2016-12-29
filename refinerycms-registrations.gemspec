@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-registrations'
-  s.version           = '0.1.2'
+  s.version           = '0.2.0'
   s.description       = 'Ruby on Rails race registrations extension for Refinery CMS'
   s.summary           = 'Race registrations extension for Refinery CMS'
   s.authors           = ['Martin Markech']

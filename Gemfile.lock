@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    refinerycms-registrations (0.1.2)
+    refinerycms-registrations (0.2.0)
       humanizer
       refinerycms-core (~> 3.0.5)
 

@@ -6,7 +6,7 @@ Developed for bike race registration, but you can override and modify for your n
 
 ## Requirements
 
-This version of refinerycms-registrations supports Rails 3.2.x and Refinery CMS ~> 2.0.8. Works with PostgreSQL, MySQL and Sqlite
+This version of refinerycms-registrations supports Rails 4.2.x and Refinery CMS ~> 3.0.0. Works with PostgreSQL, MySQL and Sqlite
 
 ## Features
 
@@ -36,7 +36,7 @@ Antispam - humanizer is translated to 13 languages.
 Open up your ``Gemfile`` and add at the bottom this line:
 
 ```ruby
-gem 'refinerycms-registrations', '~> 0.1.0'
+gem 'refinerycms-registrations', '~> 0.2.0'
 ```
 
 Now, run
@@ -83,7 +83,6 @@ rake assets:precompile
 ## Todo list
 
 * autocomplete in Club
-* tests
 
 ## Code
 
@@ -91,8 +90,11 @@ rake assets:precompile
 
 
 ## Testing
+* cd to this engine path
+* bundle install
+* rake refinery:testing:dummy_app
+* rake spec
 
-TODO
 
 ## License
 
