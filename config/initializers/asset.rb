@@ -1,0 +1,1 @@
+Rails.application.config.assets.precompile += %w( refinery/race_registrations/admin/race_registrations.css refinery/race_registrations/admin/sortable_table.css  )

@@ -11,7 +11,7 @@ module Refinery
         protected
 
         def group_params
-          params.require(:group).permit(:title, :position, :category_ids)
+          params.require(:group).permit(:title, :position, :category_ids => [])
         end
 
       end

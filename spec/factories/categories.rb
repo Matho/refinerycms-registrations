@@ -1,7 +1,6 @@
-
 FactoryGirl.define do
   factory :category, :class => Refinery::RaceRegistrations::Category do
-    sequence(:title) { |n| "refinery#{n}" }
+    title "Super Masters ( 1974 - 1915 )"
   end
 end
 

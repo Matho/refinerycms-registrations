@@ -20,7 +20,7 @@ module Refinery
         def create
           @categories = Category.all
 
-          @person = Person.new(params[:person])
+          @person = Person.new(person_params)
           @person.bypass_humanizer = true
 
 
