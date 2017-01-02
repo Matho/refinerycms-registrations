@@ -28,7 +28,7 @@ module Refinery
       protected
 
       def person_params
-        params.require(:people).permit(:name, :surname, :country, :birth_date, :email, :club, :city, :notice, :position, :registration_id, :category_id, :humanizer_answer, :humanizer_question_id)
+        params.require(:person).permit(:name, :surname, :country, :birth_date, :email, :club, :city, :notice, :position, :registration_id, :category_id, :humanizer_answer, :humanizer_question_id)
       end
 
       def find_page
